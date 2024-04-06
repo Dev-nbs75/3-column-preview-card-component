@@ -1,0 +1,95 @@
+ /*'Big Shoulders Display'*/ @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+   /*'Lexend Deca'*/ @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+        :root{
+            /* Primary */
+            --Brightorange: hsl(31, 77%, 52%);
+            --Darkcyan: hsl(184, 100%, 22%);
+            --Verydarkcyan: hsl(179, 100%, 13%);
+            /* Neutral */
+            --Transparentwhite  : hsla(0, 0%, 100%, 0.75);  /*(paragraphs):*/
+            --Verylightgray : hsl(0, 0%, 95%);/*(background, headings, buttons)*/
+        }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--Verylightgray);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Lexend Deca', system-ui, Helvetica;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        max-width: 57.65em;
+        height: 31.25em;
+        transition: all .4s ease-out;
+        margin-top: 2.5em;
+    }
+    .Container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2.5em 3.5em 3.5em 3em;
+        transition: all .4s ease-out;
+    }
+    section:first-child{
+        background-color: var(--Brightorange);
+        border-radius: .575em 0 0 .575em;
+        button{
+        color: var(--Brightorange);
+        }
+    }
+    section:nth-child(2){
+        background-color: var(--Darkcyan);
+        button{
+        color: var(--Darkcyan);
+        }
+    }
+    section:last-child{
+        border-radius: 0 .575em .575em 0;
+        background-color: var(--Verydarkcyan);
+        button{
+        color: var(--Verydarkcyan);
+        }
+    }
+    h1{
+        color: white;
+        font-family: 'Big Shoulders Display', system-ui, Helvetica;
+        font-size: 2.35em;
+        line-height: 2.5em;
+    }
+    article{
+        font-size: .95em;
+        color: var(--Transparentwhite);
+        line-height: 1.5em;
+    }
+    button{
+        font-family: 'Lexend Deca', system-ui, Helvetica;
+        border-radius: 10em;
+        border: none;
+        font-size: 1em;
+        width: 75%;
+        padding: .75em 0em .75em 0;
+    }
+    @media (max-width:685px){
+        main{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 1em;
+        }
+        .Container{
+        row-gap: 2em;
+        }
+    
+    section:first-child{
+        border-radius: .575em .575em 0 0;
+    }
+    section:last-child{
+        border-radius: 0 0 .575em .575em;
+        }
+    }
